@@ -3,13 +3,15 @@ import Root from "../components/Root";
 import Home from "../layout/Home";
 import Additem from "../components/page/Additem";
 import Updateitems from "../components/page/Updateitems";
+import Errorpage from "../components/Errorpage";
 
 const router = createBrowserRouter([
-    {
-        path:'/',
-        element:<Root></Root>,
-        errorElement:
-        children:[
+    
+{
+     path:'/',
+    element:<Root></Root>,
+    errorElement:<Errorpage></Errorpage>,
+    children:[
             {
                 path:'/',
                 element:<Home></Home>,
@@ -25,5 +27,8 @@ const router = createBrowserRouter([
 
             }
         ]
-    }
+}
+        
+    
 ])
+export default router;
