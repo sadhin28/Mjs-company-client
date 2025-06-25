@@ -91,7 +91,7 @@ function Header() {
             }}
             className={cn(
 
-                "py-5 k px-5 text-white  z-20 transition-shadow duration-300",
+                "py-5 k px-5  text-white  z-20 transition-shadow duration-300",
                 isSticky ? "sticky bg-black text-white  top-0 shadow-sm" : "",
                 isMobile ? "shadow-sm  px-5" : ""
             )}
