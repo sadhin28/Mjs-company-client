@@ -38,7 +38,7 @@ import Overlay from "../ui/Overlay";
 import useMobile from "../lib/ForMobile";
 
 
-const COLORS_TOP = ["#13FFAA","#FFBC00","#1B1343", "#6140E7", "#CE84CF", "#DD335C"];
+const COLORS_TOP = ["#29C48BFF","#DF1767FF","#184B9BFF", "#AC0BC5FF", "#949823FF", "#335F56FF"];
 //end
 
 
