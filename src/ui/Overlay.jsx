@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { cn } from "../lib/utils";
+import { cn } from "../lib/util";
+
 
 function Overlay({ children, isOpen, onClose, className }) {
   return (
