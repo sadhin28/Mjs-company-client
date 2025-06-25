@@ -1,7 +1,14 @@
+import { useLoaderData } from "react-router-dom";
+
 const Home = () => {
+    const bulbs = useLoaderData()
     return (
         <div>
-            <h1>home</h1>
+           {
+             bulbs.map(data=><div>
+                <h1>{data.name}</h1>
+             </div>)
+           }
         </div>
     );
 };
