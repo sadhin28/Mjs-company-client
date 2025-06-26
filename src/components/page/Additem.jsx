@@ -10,7 +10,7 @@ const Additem = () => {
 
     const onSubmit = async (data) => {
        
-       fetch('http://localhost:5000/led-bulbs',{
+       fetch('http://localhost:5000/ledbulbs',{
         method:"POST",
         headers:{
             'content-type':'application/json'

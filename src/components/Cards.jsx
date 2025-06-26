@@ -1,12 +1,15 @@
-import { Eye, Pencil, Trash2 } from 'lucide-react';
-const Cards = ({data}) => {
+import { Link } from "react-router-dom";
+
+
+import { Eye, Pencil, Trash2 } from "lucide-react";
+const Cards = ({data,handelDelete}) => {
+  
   const { name, photo, details, Watt, Lumen, gurantee, price } = data
  const onUpdate=()=>{
 
  }
- const onDelete=()=>{
+    
 
- }
   return (
      <div className="max-w-sm bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
       <div className='flex justify-center'>
@@ -31,18 +34,22 @@ const Cards = ({data}) => {
           >
             <Eye className="w-4 h-4" /> View
           </button>
-          <button
+          <Link>
+           <button
             onClick={onUpdate}
             className="flex items-center gap-1 px-3 py-1 text-sm bg-yellow-100 text-yellow-700 rounded hover:bg-yellow-200"
           >
             <Pencil className="w-4 h-4" /> Update
           </button>
-          <button
-            onClick={onDelete}
+          </Link>
+          
+           <button
+            onClick={()=>handelDelete(data._id)}
             className="flex items-center gap-1 px-3 py-1 text-sm bg-red-100 text-red-700 rounded hover:bg-red-200"
           >
             <Trash2 className="w-4 h-4" /> Delete
           </button>
+        
         </div>
       </div>
     </div>
