@@ -40,7 +40,7 @@ const Home = () => {
       
     }
     return (
-        <div>
+        <div className="grid mt-10 mb-10  md:grid-cols-2 lg:grid-cols-4 justify-items-center gap-5">
            {
              bulbs.map(data=><Cards handelDelete={handelDelete}  data={data}></Cards>)
            }

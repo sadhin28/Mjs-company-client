@@ -11,7 +11,7 @@ const Cards = ({data,handelDelete}) => {
     
 
   return (
-     <div className="max-w-sm bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+     <div className="w-80 bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
       <div className='flex justify-center'>
           <img  src={photo} alt={name} className="w-full h-48 object-contain" />
 
