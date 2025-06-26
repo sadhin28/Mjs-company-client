@@ -1,9 +1,17 @@
 import { useLoaderData } from "react-router-dom";
 import Cards from "../components/Cards";
 import Swal from "sweetalert2";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Home = () => {
+   useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration in ms
+      once: true,     // whether animation should happen only once
+    });
+  }, []);
    const newbulbs = useLoaderData()
    const [bulbs,setbulbs]=useState(newbulbs)
     const  handelDelete= _id => { 
@@ -40,9 +48,9 @@ const Home = () => {
       
     }
     return (
-        <div className="grid mt-10 mb-10  md:grid-cols-2 lg:grid-cols-4 justify-items-center gap-5">
+        <div   className="grid w-11/12 mx-auto mt-10 mb-10  md:grid-cols-2 lg:grid-cols-4 justify-items-center gap-15">
            {
-             bulbs.map(data=><Cards handelDelete={handelDelete}  data={data}></Cards>)
+             bulbs.map(data=><Cards   handelDelete={handelDelete}  data={data}></Cards>)
            }
         </div>
     );

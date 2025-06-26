@@ -11,7 +11,7 @@ const Cards = ({data,handelDelete}) => {
     
 
   return (
-     <div className="w-80 bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+     <div data-aos="zoom-in" className="md:w-80 w-90 bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
       <div className='flex justify-center'>
           <img  src={photo} alt={name} className="w-full h-48 object-contain" />
 
@@ -28,12 +28,12 @@ const Cards = ({data,handelDelete}) => {
         </div>
 
         <div className="flex justify-between mt-4">
-          <button
-            
+          <Link
+            to={`/details/${data._id}`}
             className="flex items-center gap-1 px-3 py-1 text-sm bg-blue-100 text-blue-700 rounded hover:bg-blue-200"
           >
             <Eye className="w-4 h-4" /> View
-          </button>
+          </Link>
           <Link>
            <button
             onClick={onUpdate}

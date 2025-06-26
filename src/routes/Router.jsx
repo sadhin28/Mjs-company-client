@@ -4,6 +4,7 @@ import Home from "../layout/Home";
 import Additem from "../components/page/Additem";
 import Updateitems from "../components/page/Updateitems";
 import Errorpage from "../components/Errorpage";
+import Details from "../components/Details";
 
 const router = createBrowserRouter([
     
@@ -25,6 +26,11 @@ const router = createBrowserRouter([
                 path:'/update-items',
                 element:<Updateitems></Updateitems>
 
+            },
+            {
+                path:'/details/:id',
+                element:<Details></Details>,
+                loader:({params})=>fetch(`http://localhost:5000/ledbulbs/${params.id}`)
             }
         ]
 }
