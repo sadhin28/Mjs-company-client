@@ -36,6 +36,7 @@ const router = createBrowserRouter([
             },
             {
                 path:'adminlogin',
+                loader:()=>fetch('http://localhost:5000/admin'),
                 element:<AdminLogin></AdminLogin>
             }
         ]

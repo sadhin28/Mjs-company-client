@@ -6,27 +6,7 @@ import { Link, NavLink } from "react-router-dom";
 
 
 
-const navItems = [
-    {
-        label: "Home",
-        link: "/",
-    },
-    {
-        label: "Add-Items",
-        link: "/add-items",
-    },
-    {
-        label: "Contact-Us",
-        link: "/contactus",
-    },
-    {
-        label: "About-Us",
-        link: "/aboutus",
-    },
-    
-    
-];
- 
+
 
 
 //motion
@@ -42,13 +22,35 @@ import Overlay from "../ui/Overlay";
 import useMobile from "../lib/ForMobile";
 import { AuthContext } from "../provider/AuthProvider";
 
-
 const COLORS_TOP = ["#29C48BFF","#DF1767FF","#184B9BFF", "#AC0BC5FF", "#949823FF", "#335F56FF"];
 //end
 
 
+
 function Header() {
-  
+  const navItems = [
+    {
+        label: "Home",
+        link: "/",
+    },
+    {
+      
+        label: "Add-Items",
+        link: "/add-items",
+       
+    },
+    {
+        label: "Contact-Us",
+        link: "/contactus",
+    },
+    {
+        label: "About-Us",
+        link: "/aboutus",
+    },
+    
+    
+];
+ 
     //motion start
     const color = useMotionValue(COLORS_TOP[0]);
 
