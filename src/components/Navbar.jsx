@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+import {  useContext, useEffect, useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { VscClose } from "react-icons/vsc";
 import { CiSearch } from "react-icons/ci";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 
 
@@ -24,7 +24,11 @@ const navItems = [
         link: "/aboutus",
     },
     
+    
 ];
+ 
+
+
 //motion
 
 import {
@@ -36,6 +40,7 @@ import {
 import { cn } from "../lib/util";
 import Overlay from "../ui/Overlay";
 import useMobile from "../lib/ForMobile";
+import { AuthContext } from "../provider/AuthProvider";
 
 
 const COLORS_TOP = ["#29C48BFF","#DF1767FF","#184B9BFF", "#AC0BC5FF", "#949823FF", "#335F56FF"];
@@ -80,7 +85,10 @@ function Header() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-
+    const {user,setUser}=useContext(AuthContext)
+     const handelLogout=()=>{
+        setUser(null)
+     }
     return (
 
         <motion.header
@@ -98,9 +106,19 @@ function Header() {
         >
 
             <div className="width items-center padding-x flex gap-10 justify-between">
-                <div className="flex gap-2 items-center ">
+                <div className="flex  gap-2 items-center ">
                   
                     <div className="font-semibold text-lg text-nowrap">MJS COMPANY</div>
+                   <div className="flex space-x-3 justify-">
+                     {
+                        !user ? <>
+                            <Link to='/adminlogin' className="btn bg-[#19BC9B] border-none rounded-sm">Login</Link>
+                            
+                            </> :<Link to='/' onClick={handelLogout} className="border-2 btn rounded-sm text-white bg-transparent">Logout</Link>
+                           
+                    }
+                   </div>
+                    
                 </div>
 
                 {isMobile ? (
