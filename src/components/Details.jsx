@@ -1,3 +1,4 @@
+import { Pencil } from 'lucide-react';
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 
@@ -17,7 +18,7 @@ const Details = () => {
                         <img className=' h-49' src={photo} alt={name} />
 
                     </div>
-                    <div>
+                    <div className='mt-5'>
                         <h1><span className='font-bold'>Name</span> : {name}</h1>
                         <h1><span className='font-bold'>Price</span> : {price}</h1>
                         <h1><span className='font-bold'>Watt</span> : {Watt}</h1>
@@ -28,9 +29,11 @@ const Details = () => {
                     </div>
                     
                 </div>
-                  <div className='w-30 flex justify-center font-bold mx-auto justify-items-center' >
+                  <div className='w-40  flex justify-center font-bold mx-auto justify-items-center' >
                         <Link to={`/updateBulb/${_id}`}
-                            className="flex items-center gap-1 px-3 py-1 text-sm bg-yellow-100 text-yellow-700 rounded hover:bg-yellow-200">Update Data</Link>
+                            className="flex items-center gap-1 px-3 py-1 text-sm bg-yellow-100 text-yellow-700 rounded hover:bg-yellow-200">
+                                <Pencil className="w-4 h-4" /> Update data
+                            </Link>
                 </div>
             </div>
 
