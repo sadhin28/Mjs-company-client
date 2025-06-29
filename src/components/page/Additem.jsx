@@ -1,8 +1,6 @@
 
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
-import { ToastContainer} from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import Swal from 'sweetalert2';
 const Additem = () => {
     const navigate=useNavigate()
@@ -94,7 +92,7 @@ const Additem = () => {
                     </button>
                 </form>
 
-                <ToastContainer position="top-right" autoClose={3000} />
+              
             </div>
         </div>
     );

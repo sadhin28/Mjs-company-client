@@ -108,15 +108,15 @@ function Header() {
         >
 
             <div className="width items-center padding-x flex gap-10 justify-between">
-                <div className="flex  gap-2 items-center ">
+                <div className="flex  gap-5 justify-center justify-items-center">
                   
                     <div className="font-semibold text-lg text-nowrap">MJS COMPANY</div>
                    <div className="flex space-x-3 justify-">
                      {
                         !user ? <>
-                            <Link to='/adminlogin' className="btn bg-[#19BC9B] border-none rounded-sm">Login</Link>
+                            <Link to='/adminlogin' className="btn p-1 bg-[#19BC9B] border-none rounded-sm">Login</Link>
                             
-                            </> :<Link to='/' onClick={handelLogout} className="border-2 btn rounded-sm text-white bg-transparent">Logout</Link>
+                            </> :<Link to='/' onClick={handelLogout} className="border-2 p-1 btn rounded-sm text-white bg-transparent">Logout</Link>
                            
                     }
                    </div>
