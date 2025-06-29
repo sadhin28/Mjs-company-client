@@ -9,14 +9,14 @@ const Cards = ({data,handelDelete}) => {
   return (
      <div data-aos="zoom-in" className="md:w-80 w-90 bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
       <div className='flex justify-center'>
-          <img  src={photo} alt={name} className="w-full h-48 object-contain" />
+          <img  src={photo} alt={name} className="w-full mt-2  h-48 object-contain" />
 
       </div>
       <div className="p-4">
         <h2 className="text-xl font-bold text-gray-800 mb-1">{name}</h2>
         <p className="text-sm text-gray-500 mb-3">{details}</p>
 
-        <div className="text-gray-700 text-sm space-y-1">
+        <div className="text-gray-700  text-sm space-y-1">
           <p><strong>Watt:</strong> {Watt}W</p>
           <p><strong>Lumen:</strong> {Lumen}</p>
           <p><strong>Guarantee:</strong> {gurantee}</p>
