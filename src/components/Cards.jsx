@@ -33,7 +33,7 @@ const Cards = ({data,handelDelete}) => {
           </Link>
         
            <Link
-            to={`/addtocard/${data._id}`}
+            to={`/dashboard/${data._id}`}
             className="flex items-center gap-1 px-3 py-1 text-sm bg-yellow-100 text-yellow-700 rounded hover:bg-yellow-200"
           >
             <VscAdd className="w-4 h-4" /> Add To Card

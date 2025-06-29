@@ -7,6 +7,7 @@ import Errorpage from "../components/Errorpage";
 import Details from "../components/Details";
 import AdminLogin from "../components/AdminLogin";
 import Privateroute from "./Privateroute";
+import Dashboard from "../components/Dashboard";
 
 const router = createBrowserRouter([
     
@@ -39,6 +40,11 @@ const router = createBrowserRouter([
                 path:'adminlogin',
                 loader:()=>fetch('http://localhost:5000/admin'),
                 element:<AdminLogin></AdminLogin>
+            },
+            {
+                path:'/dashboard/:id',
+                loader:({params})=>fetch(`http://localhost:5000/ledbulbs/${params.id}`),
+                element:<Dashboard></Dashboard>
             }
         ]
 }
