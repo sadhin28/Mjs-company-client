@@ -25,9 +25,10 @@ const router = createBrowserRouter([
                 element:<Privateroute><Additem></Additem></Privateroute>
             },
             {
-                path:'/update-items',
-                element:<Updateitems></Updateitems>
-
+                path:`/updateBulb/:id`,
+                element:<Updateitems></Updateitems>,
+                loader:({params})=>fetch(`http://localhost:5000/ledbulbs/${params.id}`)
+                
             },
             {
                 path:'/details/:id',

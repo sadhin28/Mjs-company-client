@@ -5,10 +5,6 @@ import { Eye, Pencil, Trash2 } from "lucide-react";
 const Cards = ({data,handelDelete}) => {
   
   const { name, photo, details, Watt, Lumen, gurantee, price } = data
- const onUpdate=()=>{
-
- }
-    
 
   return (
      <div data-aos="zoom-in" className="md:w-80 w-90 bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
@@ -35,12 +31,12 @@ const Cards = ({data,handelDelete}) => {
             <Eye className="w-4 h-4" /> View
           </Link>
           <Link>
-           <button
-            onClick={onUpdate}
+           <Link
+            to={`/updateBulb/${data._id}`}
             className="flex items-center gap-1 px-3 py-1 text-sm bg-yellow-100 text-yellow-700 rounded hover:bg-yellow-200"
           >
             <Pencil className="w-4 h-4" /> Update
-          </button>
+          </Link>
           </Link>
           
            <button
