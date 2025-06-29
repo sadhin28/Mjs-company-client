@@ -30,14 +30,14 @@ const Cards = ({data,handelDelete}) => {
           >
             <Eye className="w-4 h-4" /> View
           </Link>
-          <Link>
+        
            <Link
             to={`/updateBulb/${data._id}`}
             className="flex items-center gap-1 px-3 py-1 text-sm bg-yellow-100 text-yellow-700 rounded hover:bg-yellow-200"
           >
             <Pencil className="w-4 h-4" /> Update
           </Link>
-          </Link>
+         
           
            <button
             onClick={()=>handelDelete(data._id)}
