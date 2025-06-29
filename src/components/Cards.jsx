@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 
 
-import { Eye, Pencil, Trash2 } from "lucide-react";
+import {  Eye,  Trash2 } from "lucide-react";
+import { VscAdd } from "react-icons/vsc";
 const Cards = ({data,handelDelete}) => {
   
   const { name, photo, details, Watt, Lumen, gurantee, price } = data
@@ -32,19 +33,21 @@ const Cards = ({data,handelDelete}) => {
           </Link>
         
            <Link
-            to={`/updateBulb/${data._id}`}
+            to={`/addtocard/${data._id}`}
             className="flex items-center gap-1 px-3 py-1 text-sm bg-yellow-100 text-yellow-700 rounded hover:bg-yellow-200"
           >
-            <Pencil className="w-4 h-4" /> Update
+            <VscAdd className="w-4 h-4" /> Add To Card
           </Link>
          
           
+        
            <button
             onClick={()=>handelDelete(data._id)}
-            className="flex items-center gap-1 px-3 py-1 text-sm bg-red-100 text-red-700 rounded hover:bg-red-200"
+            className="flex hover:cursor-pointer items-center gap-1 px-3 py-1 text-sm bg-red-100 text-red-700 rounded hover:bg-red-200"
           >
             <Trash2 className="w-4 h-4" /> Delete
           </button>
+         
         
         </div>
       </div>
