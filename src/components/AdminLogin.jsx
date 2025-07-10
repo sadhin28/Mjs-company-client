@@ -18,20 +18,7 @@ const AdminLogin = () => {
     e.preventDefault()
     const user= e.target.name.value
     const password= e.target.password.value
-  
-    if(name=== user && pass === password){
-       
-         setUser(!null)
-        // user({user,pass})
-
-        navigate(`/add-items`)
-        
-         toast.success("Login Success full")
-    }
-    else{
-          toast.error("please Enter Valid UserName And Password")
-    
-    }
+   
     
   }
 
@@ -48,15 +35,15 @@ const AdminLogin = () => {
               htmlFor="Name"
               className="block text-sm font-medium text-gray-700"
             >
-              User NAme
+              User Email
             </label>
             <input
-              type="text"
+              type="email"
               id="text"
              
-              name='name'
+              name='email'
               className="w-full px-4 py-2 mt-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              placeholder="Enter your password"
+              placeholder="Enter your Email"
               required
             />
           </div>
