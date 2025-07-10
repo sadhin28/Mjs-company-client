@@ -88,7 +88,7 @@ const Additem = () => {
                         type="submit"
                         className="w-full bg-[#d6a86b] hover:bg-[#c99757] text-white font-semibold py-2 px-6 rounded transition-all duration-300"
                     >
-                        Add Coffee
+                        Add Now
                     </button>
                 </form>
 
