@@ -88,7 +88,6 @@ function Header() {
     }, []);
 
     const {user,setUser,Logout}=useContext(AuthContext)
-    console.log(user)
     return (
 
         <motion.header
