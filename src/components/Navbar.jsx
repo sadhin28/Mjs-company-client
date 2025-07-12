@@ -132,7 +132,7 @@ function Header() {
                         <Overlay isOpen={isOpen} onClose={onClose} />
                         <aside
                             className={cn(
-                                "h-screen fixed top-0 right-0 w-[18rem] shadow-sm bg-base-100 z-40 transition-all duration-300 p-10",
+                                "h-screen  fixed top-0 right-0 w-[18rem] shadow-sm bg-base-100 z-40 transition-all duration-300 p-10",
                                 isOpen ? "translate-x-0" : "translate-x-full"
                             )}
                         >
@@ -162,12 +162,12 @@ function Header() {
                         </aside>
                     </>
                 ) : (
-                    <nav>
-                        <ul className="flex items-center gap-7">
+                    <nav className="">
+                        <ul className="flex items-center  gap-7">
                             {navItems?.map(({ label, link }, index) => (
                                 <li
                                     key={index}
-                                    className="cursor-pointer text-base-content-200/85 text-nowrap"
+                                    className="cursor-pointer  text-base-content-200/85 text-nowrap"
                                 >
                                     <NavLink to={link} >{label}</NavLink>
                                 </li>
