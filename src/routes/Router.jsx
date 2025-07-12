@@ -8,6 +8,7 @@ import Details from "../components/Details";
 import AdminLogin from "../components/AdminLogin";
 import Privateroute from "./Privateroute";
 import Dashboard from "../components/Dashboard";
+import Login from "../components/Login";
 
 const router = createBrowserRouter([
     
@@ -37,14 +38,18 @@ const router = createBrowserRouter([
                 loader:({params})=>fetch(`http://localhost:5000/ledbulbs/${params.id}`)
             },
             {
-                path:'adminlogin',
-                loader:()=>fetch('http://localhost:5000/admin'),
+                path:'/adminlogin',
+               
                 element:<AdminLogin></AdminLogin>
             },
             {
                 path:'/dashboard/:id',
                 loader:({params})=>fetch(`http://localhost:5000/ledbulbs/${params.id}`),
                 element:<Dashboard></Dashboard>
+            },
+            {
+                path:'/login',
+                element:<Login></Login>
             }
         ]
 }

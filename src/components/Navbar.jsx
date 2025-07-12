@@ -3,7 +3,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { VscClose } from "react-icons/vsc";
 import { CiSearch } from "react-icons/ci";
 import { Link, NavLink } from "react-router-dom";
-
+import userLogo from '../assets/image.png'
 
 
 
@@ -62,7 +62,7 @@ function Header() {
             repeatType: "mirror",
         });
     }, []);
-
+    
     const backgroundImage = useMotionTemplate`radial-gradient(125% 125% at 50% 0%, #171302FF 50%, ${color})`;
     const border = useMotionTemplate`1px solid ${color}`;
     const boxShadow = useMotionTemplate`0px 4px 24px ${color}`;
@@ -87,10 +87,8 @@ function Header() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    const {user,setUser}=useContext(AuthContext)
-     const handelLogout=()=>{
-        setUser(null)
-     }
+    const {user,setUser,Logout}=useContext(AuthContext)
+    console.log(user)
     return (
 
         <motion.header
@@ -111,15 +109,16 @@ function Header() {
                 <div className="flex  gap-5 justify-center justify-items-center">
                   
                     <div className="font-semibold text-lg text-nowrap">MJS COMPANY</div>
-                   <div className="flex space-x-3 justify-">
-                     {
-                        !user ? <>
-                            <Link to='/adminlogin' className="btn p-1 bg-[#19BC9B] border-none rounded-sm">Login</Link>
-                            
-                            </> :<Link to='/' onClick={handelLogout} className="border-2 p-1 btn rounded-sm text-white bg-transparent">Logout</Link>
-                           
-                    }
-                   </div>
+                   <div className="flex gap-2 items-center">
+                {
+                    user ? <img className="md:w-10 md:h-10 w-5 h-5 rounded-full object-cover" src={user && user.
+                        photoURL} alt="" /> : <img className="w-10 h-10 rounded-full object-cover"
+                            src={userLogo} alt="" />
+                }
+                {
+                    user && user?.email ? <Link to="/" onClick={Logout} className="btn btn-neutral text-xs md:text-xl rounded-none">Log-Out</Link> : <Link to='/login' className="btn btn-neutral text-xs md:text-xl rounded-none">Log-In</Link>
+                }
+            </div>
                     
                 </div>
 

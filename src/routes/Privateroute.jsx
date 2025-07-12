@@ -13,7 +13,7 @@ const Privateroute = ({children}) => {
       return children
    }
     return (
-        <Navigate to="/adminlogin" state={location.pathname}/>
+        <Navigate to="/login" state={location.pathname}/>
     );
 };
 
