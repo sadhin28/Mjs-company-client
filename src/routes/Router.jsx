@@ -54,7 +54,7 @@ const router = createBrowserRouter([
             },
             {
                 path:'/users',
-                element:<User></User>,
+                element:<Privateroute><User></User></Privateroute>,
                 loader:()=>fetch('http://localhost:5000/user')
             }
         ]
