@@ -47,6 +47,10 @@ function Header() {
         label: "About-Us",
         link: "/aboutus",
     },
+    {
+        label: "Users",
+        link: "/users",
+    },
     
     
 ];

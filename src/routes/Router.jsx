@@ -9,6 +9,7 @@ import AdminLogin from "../components/AdminLogin";
 import Privateroute from "./Privateroute";
 import Dashboard from "../components/Dashboard";
 import Login from "../components/Login";
+import User from "../components/User";
 
 const router = createBrowserRouter([
     
@@ -50,6 +51,11 @@ const router = createBrowserRouter([
             {
                 path:'/login',
                 element:<Login></Login>
+            },
+            {
+                path:'/users',
+                element:<User></User>,
+                loader:()=>fetch('http://localhost:5000/user')
             }
         ]
 }
