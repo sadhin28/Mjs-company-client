@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import app from "../firebase/firebase.init";
+import Swal from "sweetalert2";
 
 
 const AdminLogin = () => {
@@ -16,6 +17,37 @@ const AdminLogin = () => {
     e.preventDefault()
     const email = e.target.email.value
     const password = e.target.password.value
+    const name = e.target.name.value
+    const data ={name,email}
+    fetch('http://localhost:5000/user',{
+            method:"POST",
+            headers:{
+                'content-type':'application/json'
+            },
+            body:JSON.stringify(data)
+           })
+           .then(res=>res.json())
+           .then(data=>{
+            console.log(data)
+            
+               Swal.fire({
+                 title:'Success',
+                 text:"Register Successfully",
+                 icon:'success',
+                 confirmButtonText:'Cool'
+               })
+               navigate('/')
+               
+            
+           })
+           .catch(errors=>{
+              Swal.fire({
+                 title:'Error',
+                 text:`${errors.message}`,
+                 icon:'error',
+                 confirmButtonText:'Cool'
+               })
+           })
     CreateNewUser(email, password)
       .then(res => {
        navigate('/')
@@ -45,6 +77,23 @@ const AdminLogin = () => {
           REGISTER
         </h2>
         <form onSubmit={handleSubmit}>
+          <div className="mb-6">
+            <label
+              htmlFor="email"
+              className="block text-sm font-medium text-gray-700"
+            >
+              User name
+            </label>
+            <input
+              type="text"
+              id="text"
+
+              name='name'
+              className="w-full px-4 py-2 mt-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              placeholder="Enter User Name"
+              required
+            />
+          </div>
           <div className="mb-6">
             <label
               htmlFor="email"

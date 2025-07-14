@@ -32,7 +32,7 @@ const Additem = () => {
       details:e.target.details.value,
       photo:imageBase64
        }
-       console.log(allData)
+       
        fetch('http://localhost:5000/ledbulbs',{
         method:"POST",
         headers:{
