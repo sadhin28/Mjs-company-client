@@ -9,8 +9,7 @@ import Swal from "sweetalert2";
 
 const AdminLogin = () => {
   const navigate = useNavigate()
-  const { setUser, CreateNewUser, user } = useContext(AuthContext)
-
+  const { setUser, CreateNewUser} = useContext(AuthContext)
 
 
   const handleSubmit = (e) => {
@@ -60,6 +59,7 @@ const AdminLogin = () => {
   const auth = getAuth(app)
   const provider = new GoogleAuthProvider()
   const handelLoginWithGoogle = () => {
+    
     signInWithPopup(auth, provider)
       .then(res => {
         setUser(res.user)
@@ -68,6 +68,8 @@ const AdminLogin = () => {
       .catch(error => {
          navigate('/')
       })
+     
+     
   }
   return (
 
