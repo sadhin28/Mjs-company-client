@@ -45,7 +45,7 @@ const Updateitems = () => {
             if (result.isConfirmed) {
                 Swal.fire("Saved!", "","success");
 
-                fetch(`http://localhost:5000/ledbulbs/${bulbs._id}`,{
+                fetch(`https://mjs-company-server.onrender.com/ledbulbs/${bulbs._id}`,{
                     method:'PUT',
                     headers:{
                         'content-type':'application/json'
