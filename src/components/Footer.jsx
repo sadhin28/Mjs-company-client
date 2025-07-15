@@ -57,7 +57,7 @@ const Footer = () => {
             className='px-10 md:justify-items-center items-start flex flex-col-reverse md:grid gap-10 md:grid-cols-3 text-white py-15 bg-black w-full  '>
             <div>
                 
-                <p className='md:text-start text-center'>Copyright © {new Date().getFullYear()} - All right reserved by Mesho Ltd</p>
+                <p className='md:text-start text-center'>Copyright © {new Date().getFullYear()} - All right reserved by MJS Company</p>
                  
                
             </div>

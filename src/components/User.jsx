@@ -46,6 +46,7 @@ const User = () => {
   
     return (
      <div className="p-4">
+      <h1 className="py-4"> TOTAL USERS ( {datas.length})</h1>
       <div className="overflow-x-auto">
         <div className="min-w-full inline-block align-middle">
           <div className="overflow-hidden border border-gray-300 rounded-lg shadow-md">
