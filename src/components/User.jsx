@@ -43,11 +43,7 @@ const User = () => {
         
       }
 
-  // Update handler (for demo, just alert)
-  const handleUpdate = (id) => {
-    const user = datas.find((u) => u.id === id);
-    alert(`Update user: ${user.name}`);
-  };
+  
     return (
      <div className="p-4">
       <div className="overflow-x-auto">
@@ -59,6 +55,8 @@ const User = () => {
                   <th className="px-6 py-3 text-left text-sm font-semibold text-gray-700 uppercase">ID</th>
                   <th className="px-6 py-3 text-left text-sm font-semibold text-gray-700 uppercase">Name</th>
                   <th className="px-6 py-3 text-left text-sm font-semibold text-gray-700 uppercase">Email</th>
+                  
+                  <th className="px-6 py-3 text-left text-sm font-semibold text-gray-700 uppercase">LastSignInTime</th>
                   <th className="px-6 py-3 text-left text-sm font-semibold text-gray-700 uppercase">Actions</th>
                 </tr>
               </thead>
@@ -68,13 +66,9 @@ const User = () => {
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{user._id}</td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{user.name}</td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{user.email}</td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{user.lastSignInTime}</td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm flex gap-2">
-                      <button
-                        onClick={() => handleUpdate(user._id)}
-                        className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded text-sm"
-                      >
-                        Update
-                      </button>
+                     
                       <button
                         onClick={() => handelDelete(user._id)}
                         className="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded text-sm"

@@ -19,14 +19,31 @@ const Login = () => {
     const password = e.target.password.value
 
     login(email, password)
-      .then(res => {
-        setUser(res.user)
+    .then(result =>{
+      console.log(result.user)
+      const lastSignInTime =result?.user?.metadata?.lastSignInTime
+      const loginInfo={email,lastSignInTime}
+      //update user login time
+      fetch('http://localhost:5000/user',{
+            method:"PATCH",
+            headers:{
+                'content-type':'application/json'
+            },
+            body:JSON.stringify(loginInfo)
+           })
+           .then(res=>res.json())
+           .then(data=>{
+            if(data.acknowledged == true){
+              navigate('/')
+            }
+      
+           })
 
-      })
-      .catch(error => {
 
-      })
-    navigate('/')
+    })
+    .catch(error=>{
+      console.log(error)
+    })
   }
 
   const auth = getAuth(app)
