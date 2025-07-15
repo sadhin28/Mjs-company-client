@@ -21,7 +21,7 @@ const router = createBrowserRouter([
             {
                 path:'/',
                 element:<Home></Home>,
-                loader:()=>fetch('http://localhost:5000/ledbulbs')
+                loader:()=>fetch('https://mjs-company-server.onrender.com/ledbulbs')
             },
             {
                 path:'/add-items',
@@ -30,13 +30,13 @@ const router = createBrowserRouter([
             {
                 path:`/updateBulb/:id`,
                 element:<Privateroute><Updateitems></Updateitems></Privateroute>,
-                loader:({params})=>fetch(`http://localhost:5000/ledbulbs/${params.id}`)
+                loader:({params})=>fetch(`https://mjs-company-server.onrender.com/ledbulbs/${params.id}`)
                 
             },
             {
                 path:'/details/:id',
                 element:<Details></Details>,
-                loader:({params})=>fetch(`http://localhost:5000/ledbulbs/${params.id}`)
+                loader:({params})=>fetch(`https://mjs-company-server.onrender.com/ledbulbs/${params.id}`)
             },
             {
                 path:'/adminlogin',
@@ -45,7 +45,7 @@ const router = createBrowserRouter([
             },
             {
                 path:'/dashboard/:id',
-                loader:({params})=>fetch(`http://localhost:5000/ledbulbs/${params.id}`),
+                loader:({params})=>fetch(`https://mjs-company-server.onrender.com/ledbulbs/${params.id}`),
                 element:<Dashboard></Dashboard>
             },
             {
@@ -55,7 +55,7 @@ const router = createBrowserRouter([
             {
                 path:'/users',
                 element:<Privateroute><User></User></Privateroute>,
-                loader:()=>fetch('http://localhost:5000/user')
+                loader:()=>fetch('https://mjs-company-server.onrender.com/user')
             }
         ]
 }

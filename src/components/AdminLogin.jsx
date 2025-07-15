@@ -18,7 +18,7 @@ const AdminLogin = () => {
     const password = e.target.password.value
     const name = e.target.name.value
     const data ={name,email}
-    fetch('http://localhost:5000/user',{
+    fetch('https://mjs-company-server.onrender.com/user',{
             method:"POST",
             headers:{
                 'content-type':'application/json'
