@@ -39,19 +39,12 @@ function Header() {
         link: "/add-items",
        
     },
-    {
-        label: "Contact-Us",
-        link: "/contactus",
-    },
-    {
-        label: "About-Us",
-        link: "/aboutus",
-    },
+   
     {
         label: "Users",
         link: "/users",
     },
-    
+        
     
 ];
  
