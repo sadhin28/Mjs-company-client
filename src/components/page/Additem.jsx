@@ -33,7 +33,7 @@ const Additem = () => {
       photo:imageBase64
        }
        
-       fetch('http://localhost:5000/ledbulbs',{
+       fetch('https://mjs-company-server.onrender.com/ledbulbs',{
         method:"POST",
         headers:{
             'content-type':'application/json'

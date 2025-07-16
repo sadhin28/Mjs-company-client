@@ -27,7 +27,7 @@ const Home = () => {
 }).then((result) => {
   if (result.isConfirmed) {
      console.log(_id)
-       fetch(`http://localhost:5000/ledbulbs/${_id}`,{
+       fetch(`https://mjs-company-server.onrender.com/ledbulbs/${_id}`,{
         method:"DELETE"
        })
        .then(res=>res.json())
