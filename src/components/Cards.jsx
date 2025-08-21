@@ -8,7 +8,7 @@ const Cards = ({data,handelDelete}) => {
   const { name, photo, details, Watt, Lumen, gurantee, price } = data
 
   return (
-     <div data-aos="zoom-in" className="md:w-80 w-90 bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+     <div data-aos="zoom-in" className="md:w-80 border border-blue-500 hover:border-green-500 w-90 bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
       <div className='flex justify-center'>
           <img  src={photo} alt={name} className="w-full mt-2  h-48 object-contain" />
 
