@@ -8,7 +8,7 @@ const Cards = ({data,handelDelete}) => {
   const { name, photo, details, Watt, Lumen, gurantee, price } = data
 
   return (
-     <div data-aos="zoom-in" className="md:w-80 border border-blue-500 hover:border-green-500 w-90 bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+     <div data-aos="zoom-in" className="md:w-80 border border-blue-500 hover:border-green-5002 w-90 bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
       <div className='flex justify-center'>
           <img  src={photo} alt={name} className="w-full mt-2  h-48 object-contain" />
 
@@ -43,7 +43,7 @@ const Cards = ({data,handelDelete}) => {
         
            <button
             onClick={()=>handelDelete(data._id)}
-            className="flex hover:cursor-pointer items-center gap-1 px-3 py-1 text-sm bg-red-100 text-red-700 rounded hover:bg-red-200"
+            className="flex hover:cursor-pointer items-center gap-1 px-3 py-1 text-sm bg-red-100 text-red-700 rounded hover:bg-red-300"
           >
             <Trash2 className="w-4 h-4" /> Delete
           </button>
