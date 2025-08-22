@@ -107,8 +107,7 @@ function Header() {
                     <div className="font-semibold text-lg text-nowrap">MJS COMPANY</div>
                    <div className="flex gap-2 items-center">
                 {
-                    user ? <img className="md:w-10 md:h-10 w-5 h-5 rounded-full object-cover" src={user && user.
-                        photoURL} alt="" /> : <img className="w-10 h-10 rounded-full object-cover"
+                    user ? <img className="md:w-10 md:h-10 w-5 h-5 rounded-full object-cover" src={user && user.photoURL} alt="" /> : <img className="w-10 h-10 rounded-full object-cover"
                             src={userLogo} alt="" />
                 }
                 {
